@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --border-color: rgb(255 255 255 / 50%);
+  --text-white: #fff;
+  --background-color: #202020;
+  --body-font: 16px;
+  --font-family: "Rubik", sans-serif;
+  --success-color: #b6d7b6;
+  --success-background: rgb(160 203 160 / 25%);
+  --error-color: #e1a4a4;
+  --error-background: rgb(229 156 156 / 25%);
+  --info-color: #a4e1d0;
+  --info-background: rgb(156 212 229 / 25%);
+  --warning-color: #d8dfb5;
+  --warning-background: rgb(189 164 72 / 25%);
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-white);
+  /* background: url(https://img.freepik.com/free-vector/metropolis-night-landscape-neon-cartoon-vector_1441-3163.jpg?t=st=1655627777~exp=1655628377~hmac=32b98b24bcb49046400f4a2a882416623f9f8bd6ef43e3bb9001a8b1fb04ad86&w=1480); */
+  background-size: cover;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  color: var(--text-white);
+  text-decoration: none;
+}
+
+.btn,
+.btn.btn-primary {
+  color: var(--text-white);
+  background-color: transparent;
+  border-color: var(--border-color);
+  box-sizing: border-box;
+  padding: 5px 15px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.btn-primary:hover,
+.btn.btn.btn-primary:focus,
+.btn.btn.btn-primary:active {
+  color: var(--text-white);
+  background-color: transparent;
+  border-color: var(--border-color);
+  outline: none;
+}
+
+.form-control,
+.form-control:hover,
+.form-control:focus,
+.form-control:active {
+  color: var(--text-white);
+  background-color: transparent;
+  border-color: var(--border-color);
+  outline: none;
+}
+
+hr {
+  border-top: 1px solid var(--border-color);
+}
+
+.jumbotron {
+  background: rgb(104 104 104 / 25%);
+  box-shadow: inset 0px 5px 20px 0 rgb(255 255 255 / 40%);
+  backdrop-filter: blur(4px);
+  border-radius: 10px !important;
+  border: 1px solid rgb(255 255 255 / 15%);
+}
+.jumbotron p {
+  font-size: var(--body-font);
+}
+
+.panel {
+  background-color: #333;
+}
+
+.panel-default > .panel-heading {
+  color: var(--text-white);
+  background-color: #333;
+  border-color: var(--border-color);
+}

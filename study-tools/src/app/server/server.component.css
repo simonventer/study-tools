@@ -1,0 +1,13 @@
+.online {
+  /* color: var(--success-color);
+  background-color: var(--success-background); */
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.offline {
+  /* color: var(--error-color);
+  background-color: var(--error-background); */
+  padding: 5px;
+  border-radius: 5px;
+}

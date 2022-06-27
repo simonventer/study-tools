@@ -1,0 +1,13 @@
+.servers-contain {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 15px;
+}
+
+.servers-contain input {
+  flex: 0 1 auto;
+}
+
+.servers-contain button {
+  flex: 0 1 auto;
+}

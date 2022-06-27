@@ -1,0 +1,5 @@
+<!--Comments-->
+<!--#16: Create your html and add your string interpolation tags that you want updated-->
+<p [ngStyle]="{backgroundColor: getColor(), color: getTextColor()}"
+   [ngClass]="{online: serverStatus === 'online', offline: serverStatus === 'offline'}">
+  {{'Server'}} with id {{serverId}} is {{getServerStatus()}}.</p>

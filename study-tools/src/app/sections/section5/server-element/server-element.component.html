@@ -1,0 +1,17 @@
+<!--This is the generated content-->
+<div class="panel panel-default">
+     <!-- <div class="panel-heading">{{element.name}}</div> -->
+     <!--  Testing onChange -->
+     <div class="panel-heading"
+          #heading>{{name}}</div>
+     <div class="panel-body">
+          <!-- <p>
+               <strong *ngIf="element.type === 'server'"
+                       style="color: red">{{element.content}}</strong>
+               <em *ngIf="element.type === 'blueprint'">{{element.content}}</em>
+          </p> -->
+
+          <!--If you want to pass this into a outside component - you can use hooks-->
+          <ng-content></ng-content>
+     </div>
+</div>
