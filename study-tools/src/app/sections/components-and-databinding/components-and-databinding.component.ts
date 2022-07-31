@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-section5',
-  templateUrl: './section5.component.html',
-  styleUrls: ['./section5.component.css'],
+  selector: 'app-components-and-databinding',
+  templateUrl: './components-and-databinding.component.html',
+  styleUrls: ['./components-and-databinding.component.css'],
 })
-export class Section5Component implements OnInit {
+export class ComponentsAndDatabindingComponent implements OnInit {
   //We moved this to the cockpit.component.ts file
   //public newServerName = '';
   //public newServerContent = '';

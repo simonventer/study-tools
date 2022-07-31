@@ -12,22 +12,29 @@ import { Assignment1Component } from './assignments/assignment1/assignment1.comp
 import { Assignment2Component } from './assignments/assignment2/assignment2.component';
 import { Assignment3Component } from './assignments/assignment3/assignment3.component';
 import { Assignment4Component } from './assignments/assignment4/assignment4.component';
+import { Assignment5Component } from './assignments/assignment5/assignment5.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ProjectComponent } from './project/project.component';
-import { RecipesComponent } from './project/recipes/recipes.component';
-import { RecipeListComponent } from './project/recipes/recipe-list/recipe-list.component';
-import { RecipeDetailComponent } from './project/recipes/recipe-detail/recipe-detail.component';
-import { RecipeItemComponent } from './project/recipes/recipe-list/recipe-item/recipe-item.component';
-import { ShoppingListComponent } from './project/shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './project/shopping-list/shopping-edit/shopping-edit.component';
-import { ProjectHeaderComponent } from './project/project-header/project-header.component';
-import { Section5Component } from './sections/section5/section5.component';
-import { CockpitComponent } from './sections/section5/cockpit/cockpit.component';
-import { ServerElementComponent } from './sections/section5/server-element/server-element.component';
+import { ComponentsAndDatabindingComponent } from './sections/components-and-databinding/components-and-databinding.component';
+import { CockpitComponent } from './sections/components-and-databinding/cockpit/cockpit.component';
+import { ServerElementComponent } from './sections/components-and-databinding/server-element/server-element.component';
 import { GameControlComponent } from './assignments/assignment4/game-control/game-control.component';
 import { OddComponent } from './assignments/assignment4/odd/odd.component';
 import { EvenComponent } from './assignments/assignment4/even/even.component';
+import { ProjectComponent } from './project/project.component';
+import { DirectivesComponent } from './sections/directives/directives.component';
+import { BasicHighlightDirective } from './sections/directives/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './sections/directives/better-highlight/better-highlight.directive';
+import { UnlessDirective } from './sections/directives/unless/unless.directive';
+import { ServicesComponent } from './sections/services/services.component';
+import { NewAccountComponent } from './sections/services/new-account/new-account.component';
+import { AccountComponent } from './sections/services/account/account.component';
+import { AccountsService } from './sections/services/accounts.service';
+import { LoggingService } from './sections/services/logging.service';
+import { ActiveUsersComponent } from './assignments/assignment5/active-users/active-users.component';
+import { InactiveUsersComponent } from './assignments/assignment5/inactive-users/inactive-users.component';
+import { RoutingComponent } from './sections/routing/routing.component';
+import { ObservablesComponent } from './sections/observables/observables.component';
 
 //10. add your server component to the html file - go to app.component.html
 
@@ -39,9 +46,14 @@ const appRoutes: Routes = [
   { path: 'assignment2', component: Assignment2Component },
   { path: 'assignment3', component: Assignment3Component },
   { path: 'assignment4', component: Assignment4Component },
-  { path: 'project', component: ProjectComponent },
-  { path: 'project1', component: ProjectComponent },
-  { path: 'section5', component: Section5Component },
+  { path: 'assignment5', component: Assignment5Component },
+  { path: 'project1', component: ProjectComponent, loadChildren: () => import('./project/project.module').then(m => m.ProjectModule) },
+  { path: 'components-and-databinding', component: ComponentsAndDatabindingComponent },
+  { path: 'directives', component: DirectivesComponent },
+  { path: 'services', component: ServicesComponent },
+  //Routing + imporing child routes
+  { path: 'routing', component: RoutingComponent, loadChildren: () => import('./sections/routing/routing.module').then(m => m.RoutingModule) },
+  { path: 'observables', component: ObservablesComponent, loadChildren: () => import('./sections/observables/observables-routing.module').then(m => m.ObservablesRoutingModule) }
 ];
 
 @NgModule({
@@ -58,27 +70,33 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     ProjectComponent,
-    RecipesComponent,
-    RecipeListComponent,
-    RecipeDetailComponent,
-    RecipeItemComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent,
-    ProjectHeaderComponent,
-    Section5Component,
+    ComponentsAndDatabindingComponent,
     CockpitComponent,
     ServerElementComponent,
     GameControlComponent,
     OddComponent,
     EvenComponent,
+    DirectivesComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective,
+    ServicesComponent,
+    NewAccountComponent,
+    AccountComponent,
+    Assignment5Component,
+    ActiveUsersComponent,
+    InactiveUsersComponent,
+    RoutingComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    // RouterModule.forRoot(appRoutes, {useHash: true}),
     RouterModule.forRoot(appRoutes),
     NgbModule,
   ],
-  providers: [],
+  providers: [AccountsService, LoggingService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

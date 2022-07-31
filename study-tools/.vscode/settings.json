@@ -1,0 +1,20 @@
+{
+  "workbench.iconTheme": "webstorm-icons",
+  "git.decorations.enabled": false,
+  "editor.codeActionsOnSave": {
+
+  
+  },
+  "workbench.colorCustomizations": {
+    // Editor Groups & Tabs — Editor Groups are the containers of editors. There can be up to three editor groups. A Tab is the container of an editor. Multiple Tabs can be opened in one editor group.
+    "tab.activeBorderTop": "#0A84FF", 
+    "tab.activeBackground": "#212e3a",
+    "tab.hoverBackground": "#212e3a",
+    // Activity Bar — The Activity Bar is displayed either on the far left or right of the workbench and allows fast switching between views of the Side Bar.
+    "activityBar.activeBackground": "#4e4e4e",
+    // Lists and Trees — Colors for list and trees like the File Explorer. An active list/tree has keyboard focus, an inactive does not.
+    "list.hoverBackground": "#212e3a",
+    "list.activeSelectionBackground": "#212e3a",
+    "list.inactiveSelectionBackground": "#212e3a",
+  },
+}

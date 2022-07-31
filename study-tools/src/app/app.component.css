@@ -3,6 +3,7 @@
 :root {
   --border-color: rgb(255 255 255 / 50%);
   --text-white: #fff;
+  --text-dark: #333;
   --background-color: #202020;
   --body-font: 16px;
   --font-family: "Rubik", sans-serif;
@@ -60,13 +61,28 @@ a:active {
 }
 
 .form-control,
+select.form-control,
 .form-control:hover,
+select.form-control:hover,
+select.form-control:focus,
 .form-control:focus,
+select.form-control:active,
 .form-control:active {
   color: var(--text-white);
   background-color: transparent;
   border-color: var(--border-color);
   outline: none;
+}
+
+select.form-control option,
+select.form-control option:hover,
+select.form-control option:focus,
+select.form-control option:active{
+  color: var(--text-dark);
+}
+
+.list-group-item {
+  color: var(--text-dark);
 }
 
 hr {

@@ -9,5 +9,9 @@ nav.navbar {
 
 .nav > li > a:focus,
 .nav > li > a:hover {
-  background: transparent;
+  background: rgb(190, 190, 190);
+}
+
+.navbar-nav>li.active > a {
+  color: #00b8ff;
 }
