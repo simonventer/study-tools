@@ -35,6 +35,7 @@ import { ActiveUsersComponent } from './assignments/assignment5/active-users/act
 import { InactiveUsersComponent } from './assignments/assignment5/inactive-users/inactive-users.component';
 import { RoutingComponent } from './sections/routing/routing.component';
 import { ObservablesComponent } from './sections/observables/observables.component';
+import { AppFormsComponent } from './sections/forms/forms.component';
 
 //10. add your server component to the html file - go to app.component.html
 
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
   { path: 'services', component: ServicesComponent },
   //Routing + imporing child routes
   { path: 'routing', component: RoutingComponent, loadChildren: () => import('./sections/routing/routing.module').then(m => m.RoutingModule) },
-  { path: 'observables', component: ObservablesComponent, loadChildren: () => import('./sections/observables/observables-routing.module').then(m => m.ObservablesRoutingModule) }
+  { path: 'observables', component: ObservablesComponent, loadChildren: () => import('./sections/observables/observables-routing.module').then(m => m.ObservablesRoutingModule) },
+  { path: 'forms', component: AppFormsComponent },
 ];
 
 @NgModule({
@@ -87,7 +89,8 @@ const appRoutes: Routes = [
     ActiveUsersComponent,
     InactiveUsersComponent,
     RoutingComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    AppFormsComponent
   ],
   imports: [
     BrowserModule,

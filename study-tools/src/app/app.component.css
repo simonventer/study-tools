@@ -25,10 +25,17 @@ html {
 
 body {
   font-family: var(--font-family);
-  background-color: var(--background-color);
   color: var(--text-white);
-  /* background: url(https://img.freepik.com/free-vector/metropolis-night-landscape-neon-cartoon-vector_1441-3163.jpg?t=st=1655627777~exp=1655628377~hmac=32b98b24bcb49046400f4a2a882416623f9f8bd6ef43e3bb9001a8b1fb04ad86&w=1480); */
   background-size: cover;
+  background-color:#d499ff;
+background-image:
+radial-gradient(at 12% 39%, hsla(237,86%,61%,1) 0px, transparent 50%),
+radial-gradient(at 80% 23%, hsla(8,85%,61%,1) 0px, transparent 50%),
+radial-gradient(at 63% 76%, hsla(185,91%,76%,1) 0px, transparent 50%),
+radial-gradient(at 42% 45%, hsla(93,94%,60%,1) 0px, transparent 50%),
+radial-gradient(at 19% 94%, hsla(263,85%,65%,1) 0px, transparent 50%),
+radial-gradient(at 68% 82%, hsla(292,98%,66%,1) 0px, transparent 50%),
+radial-gradient(at 28% 52%, hsla(5,92%,65%,1) 0px, transparent 50%);
 }
 
 a,
